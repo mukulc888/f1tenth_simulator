@@ -59,7 +59,12 @@ if(DEFINED CATKIN_DEVEL_PREFIX)
     std_msgs
     message_generation
     )
-
+    
+    add_message_files(
+      FILES
+      PIDmsgs.msg
+    )
+  
   generate_messages(
     DEPENDENCIES
     std_msgs
@@ -67,7 +72,8 @@ if(DEFINED CATKIN_DEVEL_PREFIX)
     sensor_msgs
     )
 
-
+    
+    
 
 
   # Include catkin_libraries

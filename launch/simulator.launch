@@ -4,7 +4,7 @@
   <node pkg="joy" name="joy_node" type="joy_node"/>
 
   <!-- Launch a map from the maps folder-->
-  <arg name="map" default="$(find f1tenth_simulator)/maps/levine.yaml"/>
+  <arg name="map" default="$(find f1tenth_simulator)/maps/australia.yaml"/>
   <node pkg="map_server" name="map_server" type="map_server" args="$(arg map)"/>
 
   <!-- Launch the racecar model -->
@@ -40,8 +40,23 @@
   <!--   <node pkg="f1tenth_simulator" name="new node's name" type="new file name" output="screen">
           <rosparam command="load" file="$(find f1tenth_simulator)/params.yaml"/>
   	 </node>    -->
-
   
+ <!-- Run the map server --> 
+    <!-- <node name="map_server" pkg="map_server" type="map_server" args="$(find my_map_package)/my_map.pgm my_map_resolution"/> -->
+
+ <!--- Run AMCL 
+    <include file="$(find amcl)/examples/amcl_omni.launch" />--> 
+ <!-- <node pkg="f1tenth_simulator" name="cmdtoackerman" type="cmdtoackerman.py" /> -->
+ <!-- <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
+    <rosparam file="$(find move_base_launcher)/params/costmap_common_params.yaml" command="load" ns="global_costmap" /> 
+    <rosparam file="$(find move_base_launcher)/params/costmap_common_params.yaml" command="load" ns="local_costmap" />
+    <rosparam file="$(find move_base_launcher)/params/local_costmap.yaml" command="load" />
+    <rosparam file="$(find move_base_launcher)/params/global_costmap.yaml" command="load" /> 
+    <rosparam file="$(find move_base_launcher)/params/base_local_planner.yaml" command="load" />
+ </node>
+
+    <node pkg="f1tenth_simulator" name="cmdtoackerman" type="cmdtoackerman.py" output="screen"> 
+    </node> -->
   <!-- Launch RVIZ -->
     <node pkg="rviz" type="rviz" name="rviz" args="-d $(find f1tenth_simulator)/launch/simulator.rviz" output="screen"/>
 </launch>

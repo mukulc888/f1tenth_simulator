@@ -86,7 +86,7 @@ keyboard_speed: 1.8  # meters/second
 keyboard_steer_ang: .3  # radians
 
 # obstacle parameters
-obstacle_size: 2
+obstacle_size: 0
 
 # The names of topics to listen and publish to
 joy_topic: "/joy"

@@ -117,7 +117,7 @@ public:
         add_channel(brake_drive_topic, drive_topic, brake_mux_idx);
 
         // General navigation channel
-        int nav_mux_idx;
+        int nav_mux_idx;    
         std::string nav_drive_topic;
         n.getParam("nav_drive_topic", nav_drive_topic);
         n.getParam("nav_mux_idx", nav_mux_idx);
