@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<launch>
+  <node name = "pid_wall_follower" pkg = "f1tenth_simulator" type = "pid_error.py" output = "screen">
+    <rosparam command="load" file="$(find f1tenth_simulator)/params.yaml"/>
+  </node>
+
+  <node name = "control" pkg = "f1tenth_simulator" type = "controller.py" output = "screen">
+    <rosparam command="load" file="$(find f1tenth_simulator)/params.yaml"/> 
+  </node>
+</launch>
