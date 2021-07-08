@@ -47,7 +47,7 @@
  <!--- Run AMCL 
     <include file="$(find amcl)/examples/amcl_omni.launch" />--> 
  <!-- <node pkg="f1tenth_simulator" name="cmdtoackerman" type="cmdtoackerman.py" /> -->
- <!-- <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
+ <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
     <rosparam file="$(find move_base_launcher)/params/costmap_common_params.yaml" command="load" ns="global_costmap" /> 
     <rosparam file="$(find move_base_launcher)/params/costmap_common_params.yaml" command="load" ns="local_costmap" />
     <rosparam file="$(find move_base_launcher)/params/local_costmap.yaml" command="load" />
@@ -55,8 +55,8 @@
     <rosparam file="$(find move_base_launcher)/params/base_local_planner.yaml" command="load" />
  </node>
 
-    <node pkg="f1tenth_simulator" name="cmdtoackerman" type="cmdtoackerman.py" output="screen"> 
-    </node> -->
+    <!-- <node pkg="f1tenth_simulator" name="cmdtoackerman" type="cmdtoackerman.py" output="screen"> 
+    </node> --> 
   <!-- Launch RVIZ -->
     <node pkg="rviz" type="rviz" name="rviz" args="-d $(find f1tenth_simulator)/launch/simulator.rviz" output="screen"/>
 </launch>
